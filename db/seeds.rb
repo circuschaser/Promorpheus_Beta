@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Song.delete_all
+CSV.foreach("seedplay.txt", headers: true) do |row|
+		Song.create! row.to_hash
+end
