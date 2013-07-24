@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   has_many :setlists
-  has_many :songs :through => :setlists
+  has_many :songs, :through => :setlists
 
   before_save { |user| user.email = user.email.downcase }
   before_save :create_remember_token

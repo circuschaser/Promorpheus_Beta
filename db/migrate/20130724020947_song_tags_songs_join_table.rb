@@ -4,4 +4,5 @@ class SongTagsSongsJoinTable < ActiveRecord::Migration
   		t.integer :song_id
   		t.integer :song_tag_id
   	end
+  end
 end

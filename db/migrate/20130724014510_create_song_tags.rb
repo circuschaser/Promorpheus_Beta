@@ -6,7 +6,7 @@ class CreateSongTags < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :tags, :tag
+    add_index :song_tags, :tag
 
   end
 end
