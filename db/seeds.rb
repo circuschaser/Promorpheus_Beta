@@ -7,11 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Composer.delete_all
-CSV.foreach("Composers.txt", headers: true) do |row|
-		Composer.create! row.to_hash
+CSV.foreach("doc/Composers.csv", headers: true) do |row|
+	Composer.create! row.to_hash
 end
 
 Album.delete_all
-CSV.foreach("Albums.txt", headers: true) do |row|
-		Album.create! row.to_hash
+CSV.foreach("doc/Albums.csv", headers: true) do |row|	
+	a = Album.create! row.to_hash
+	a.update_attribute(:composer_id, (Composer.find_by_name a.composer_name).id)
 end
