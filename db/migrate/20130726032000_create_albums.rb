@@ -8,5 +8,8 @@ class CreateAlbums < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :albums, :composer_id
+
   end
 end
