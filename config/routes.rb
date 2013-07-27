@@ -16,7 +16,7 @@ PromorpheusBeta::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
 
   # match '/dashboard', to: "users#show"
-  # match '/music', to: "#"
+  match '/music', to: "songs#index"
 
 end
 

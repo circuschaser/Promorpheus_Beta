@@ -1,0 +1,45 @@
+<% provide(:title, "My Music") %>
+<div id="content_main">
+	<div class="paper_wrap">
+		<div class="paper">
+
+
+			<h3>My Songs
+				<span>
+			  		<%= link_to "USELESS BUTTON", "#", :class => 'btn' %><br/>
+				</span>
+			</h3>
+
+			<%= will_paginate @songs, inner_window: 2 %>
+
+
+      <% if @songs.size == 0 -%>
+      <p class="alert">You haven't added any music yet. <%= link_to "Add a new song", "#", :id => 'new_button' %> to get started!</p>
+      <% else -%>
+      <div>
+
+      	<table class="piece">
+
+        	<% @songs.each do |song| %>
+      		<tr>
+      			<td class="content_left">
+      				<%= song[:title] %>
+      				<p class="meta"><%= song[:composer_name] %>
+      				&ensp; &loz; &ensp; <%= song[:album_name] %>
+      				&ensp; &loz; &ensp; <%= song[:genre_name] %></p>
+      			</td>
+      		</tr>
+	        <% end %>
+    	</table>
+      </div>
+      <% end -%>
+
+		</div>
+	</div>
+</div>
+<div id="sidebar">
+  <h4>The Sidebar Headline</h4>
+  <p>Lorem ipsum Dolor Duis incididunt cillum cillum est ad nulla ex commodo elit Ut. Lorem ipsum Reprehenderit reprehenderit fugiat magna laborum aliqua ut aliqua. Lorem ipsum Pariatur Ut anim aliquip nisi aliqua in ut pariatur qui dolore culpa qui.</p>
+</div>
+
+
