@@ -5,5 +5,6 @@ class Song < ActiveRecord::Base
   belongs_to :genre
 
   has_and_belongs_to_many :tags, join_table: "songs_tags"
+  has_and_belongs_to_many :setlists, join_table: "setlists_songs"
 
 end

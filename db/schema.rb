@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130727124500) do
+ActiveRecord::Schema.define(:version => 20130727161701) do
 
   create_table "albums", :force => true do |t|
     t.string   "album_name"
@@ -35,6 +35,24 @@ ActiveRecord::Schema.define(:version => 20130727124500) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "setlists", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "performance_date"
+    t.integer  "user_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "setlists", ["user_id", "performance_date"], :name => "index_setlists_on_user_id_and_performance_date"
+
+  create_table "setlists_songs", :id => false, :force => true do |t|
+    t.integer "song_id"
+    t.integer "setlist_id"
+  end
+
+  add_index "setlists_songs", ["song_id", "setlist_id"], :name => "index_setlists_songs_on_song_id_and_setlist_id"
+
   create_table "songs", :force => true do |t|
     t.string   "title"
     t.string   "composer_name"
@@ -53,6 +71,8 @@ ActiveRecord::Schema.define(:version => 20130727124500) do
     t.integer "song_id"
     t.integer "tag_id"
   end
+
+  add_index "songs_tags", ["song_id", "tag_id"], :name => "index_songs_tags_on_song_id_and_tag_id"
 
   create_table "tags", :force => true do |t|
     t.string   "tag"
