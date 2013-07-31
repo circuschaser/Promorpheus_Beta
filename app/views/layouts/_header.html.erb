@@ -1,6 +1,6 @@
 <div id="header">
-  <div class="container">
-    
+    <div class="container">
+
     <div id="logo">
       <% if signed_in? %>
       <%= link_to image_tag("logo.png"), "/home" %>
@@ -11,53 +11,44 @@
 
     <% if signed_in? %>
 
-      <div id="topbar">
-  <!-- missing -->
-          <div id="navmenu">
-            <span><%= link_to "My Music", "/music" %></span>
-            <span><%= link_to "My Circles", "#" %></span>
-            <span><%= link_to "My Setlists", "#" %></span>
-            <span><%= link_to "Admin", "#" %></span>
+    <div id="topbar">
 
-  <!-- missing -->
-            <div class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                My Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
-              </ul>
-            </div>
-          </div>
+      <div id="navmenu">
+        <span><%= link_to "My Music", "/music" %></span>
+        <span><%= link_to "My Circles", "#" %></span>
+        <span><%= link_to "My Setlists", "#" %></span>
 
-  <!-- missing END -->
-
-          <div id="toprightbar">
-            <div id="current_user_info">
-
-  <!-- missing -->
-            </div>
-            <div id="search_form">
-              <%= form_for "/pieces" do |f| %>
-              <span>Search</span> <%= f.text_field :search %>
-              <% end %>
-            </div>
-          </div>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            My Account <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Profile", current_user %></li>
+            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+          </ul>
+        </div>
       </div>
+
+
+      <div id="search_form">
+        <%= form_tag 'songs/index', method: "get" do %>
+        <span>Search</span> <%= text_field :search, params[:search] %>
+        <% end %>
+      </div>
+    
+    </div>
 
     <% else %>
-      <div id="topbar">
-          <div id="toprightbar2">
-            <%= link_to "SIGN IN HELP", "https://en.wikipedia.org/wiki/Login", :class => "btn-mini" %>
-          </div>
+
+    <div id="topbar">
+      <div id="topbar_right"
+        <%= link_to "SIGN IN HELP", "https://en.wikipedia.org/wiki/Login", :class => "btn-mini" %>
       </div>
+    </div>
+
     <% end %>
 
-  <!-- missing -->
-
-      </div>
-  </div>        
+  </div>
 </div>

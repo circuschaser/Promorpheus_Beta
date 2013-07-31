@@ -5,7 +5,9 @@
 
       <%= stylesheet_link_tag 'humanity/jquery-ui-1.8rc3.custom', :media => 'screen' %>
 
-      <%= stylesheet_link_tag 'custom' %>
+      <%= stylesheet_link_tag 'music' %>
+      <%= stylesheet_link_tag 'structure' %>
+      <%= stylesheet_link_tag 'colors_fonts' %>
 
       <%= javascript_include_tag 'jquery-1.4.2.min' %>
       <%= javascript_include_tag 'jquery-ui-1.8rc3.custom.min' %>
@@ -16,9 +18,8 @@
   </head>
 
   <body>
-    <div id="wrapper">
-      <%= render 'layouts/header' %>
 
+      <%= render 'layouts/header' %>
 
     <div id="content">
       <div class="container">
@@ -36,8 +37,6 @@
       <script type="text/javascript">
         <%= yield :javascript %>
       </script>
-    </div>
 
-    
   </body>
 </html>

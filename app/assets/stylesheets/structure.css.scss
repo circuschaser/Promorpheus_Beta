@@ -1,0 +1,290 @@
+@import "bootstrap";
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* DEBUG INFO CONTAINER                                 */
+.debug-dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* DELETE THIS AFTER DELETING CIRCUSCHASER LINK         */
+#content #circuschaser a {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom, #959186, #626054);
+  font-family:Courier;
+  color: #fff;
+  border: 2px solid gray;
+  border-radius: 4px;
+  text-align:center;
+  margin: 4px;
+  padding-left: 8px;
+  padding-top: 6px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+}
+
+/* HTML main                                            */
+html {
+  min-height: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+/* HEADER                                               */
+
+#header {
+  height: 45px;
+}
+
+#logo {
+  width: 160px;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#header #logo a img {
+  width: 160px;
+}
+
+/* NAVIGATION MENU                                      */
+
+#navmenu {
+  float: left;
+  margin-top: 4px;
+  margin-left: 4px;
+  padding-left: 18px;
+}
+
+#navmenu span a, #navmenu span a:visited {
+  margin: 0 12px 0 12px;
+}
+
+#navmenu div.dropdown, #navmenu div.dropdown a {
+  display: inline;
+  position: relative;
+  margin: 0 12px 0 12px;
+}
+
+#navmenu div.hovering div {
+  display: block;
+}
+
+/* TOP BAR                                              */
+
+#topbar {
+  width: 918px;
+  float: right;
+}
+
+#topbar_right {
+  float: right;
+}
+
+/* TOP SEARCH FORM                                      */
+
+#search_form {
+  display: inline;
+  float: right;
+  padding-right: 10px;
+}
+
+#search_form span {
+  margin: 0 5px 0 0;
+}
+
+#search_form form {
+  display: inline;
+}
+
+#search_form form input {
+  width: 160px;
+  height: 5px;
+  border: 1px #000;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 100%;
+  box-shadow: inset 2px 3px 5px gray;
+}
+
+/* SIDEBAR                                              */
+
+#sidebar {
+  width: 230px;
+  float: right;
+  position: static;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* CONTENT                                              */
+
+#content_main {
+  width: 810px;
+  float: left;
+  margin-top: 0;
+  padding-top: 10px;
+  /*padding-bottom: 70px; */
+}
+
+.content_greywrap {
+  /*width: 800px;*/
+  /*float: left;*/
+  padding-top: 12px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  border-radius: 5px;
+}
+
+.content_head {
+  padding-left: 10px;
+  padding-right: 12px;
+}
+
+.content_body {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+}
+
+/* FORMS                                                */
+
+.formbox {
+  padding: 12px 50px 20px 50px;
+  border-radius: 5px;
+}
+
+input, textarea, select, .uneditable-input {
+  width: 100%;
+  padding: 10px;
+  height: auto !important;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+.btn-small {
+  margin-top: 2px;
+}
+
+#content #linkbutton a {
+  border-radius: 5px;
+  margin: 4px;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+}
+
+/* FOOTER                                               */
+#footer {
+  height: 40px;
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+#footer_logo {
+  margin-top: 4px;
+  float: left;
+}
+
+#footer_links {
+  float: right;
+  margin-top: 4px;
+}
+
+#footer_links span {
+  margin: 6px 0 6px 18px;
+}
+
+#footer_links span a, #footer_links span a:visited {
+  padding: 0 4px 0 4px;
+}
+
+#footer_links span img {
+  vertical-align: middle;
+  border: none;
+}
+
+/* MISCELLANEOUS                                        */
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+div.ui-dialog form label {
+  text-align: left;  
+}
+
+.clear {
+  clear:both;
+}
+
+/* ERROR REPORTING                                      */
+#error_explanation {
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+/* PAGINATION                                           */
+
+.pagination {
+  padding: 0.3em;
+  cursor: default; 
+}
+
+.pagination a{
+  padding: 0px 12px 0px 12px;
+  margin: 0px 5px -10px 0px;
+}
+
+.pagination span{
+  padding: 0px 0px 0px 0px;
+  /*margin: 0px 0px 0px 0px;*/
+  border: 0px;
+}
+
+.pagination .page_info {
+  padding-top: 0.8em;
+}
+.pagination .previous_page, .pagination .next_page {
+  /*border-width: 2px; */
+}
+.pagination .previous_page {
+  margin-right: 1em; 
+}
+.pagination .next_page {
+  margin-left: 1em; 
+}

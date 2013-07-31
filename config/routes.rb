@@ -5,11 +5,20 @@ PromorpheusBeta::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
+  resources :composers
+  resources :albums
+  resources :songs
+  resources :genres
+  resources :setlists
+  resources :tags
+
   get "users/new"
 
   root to: 'sessions#new'
 
+  # match '/home', to: "pages#home"
   match '/home', to: "pages#home"
+
   match '/signup', to: 'users#new'
   
   match '/signin', to: 'sessions#new'

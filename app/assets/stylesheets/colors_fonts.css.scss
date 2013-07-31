@@ -1,0 +1,222 @@
+/*$brown: #5b2c10;*/
+
+/* HTML MAIN                                       */
+
+html, body {
+  /*background-color: #5b2c10;*/
+  background: linear-gradient(to bottom, #421d02, #5b2c10 40%, #150d02);
+  font-family: Lucida Grande, Lucida Sans Unicode, sans-serif;
+  font-size: small;
+}
+
+.container {
+  text-align: left;
+  /*border: 1px dashed black;*/
+}
+
+/* NAVIGATION MENU                                 */
+
+#navmenu span a, #navmenu span a:visited {
+  color: #B08D71;
+  font-size: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#navmenu span a:hover {
+  color: #ffcda3;
+  text-decoration: none;
+}
+
+#navmenu div.dropdown, #navmenu div.dropdown a {
+  color: #B08D71;
+  font-size: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+      text-decoration: none;
+    }
+}
+
+#search_form span {
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* TOP BAR                                         */
+
+#topbar {
+  background: linear-gradient(to bottom, #433832, #332822 30%, #2a1f19 55%, #332822);
+}
+
+#topbar_right {
+  color: #B08D71;
+  font-size: 10px;
+}
+
+/* FOOTER                                          */
+
+#footer {
+  background: #1d1610;
+  border-top: 1px solid #B08D71;
+}
+
+#footer_links span {
+  color: #B08D71;
+}
+
+#footer_links span a:hover {
+  text-decoration: none;
+}
+
+#footer_links span a, #footer_links span a:visited {
+  color: #B08D71;
+  text-decoration: none;
+}
+
+/* SIDEBAR                                         */
+
+#sidebar {
+  background-color: #1D1610;
+  font-size: 90%;
+  /*border: 2px dotted green;*/
+}
+
+#sidebar h4 {
+  color: #B08D71;
+  font-family: Arial;
+  text-align: center;
+}
+
+#sidebar p {
+  color: #fff;
+}
+
+/* CONTENT                                         */
+
+#content_main {
+  /*border: 2px dotted yellow;*/
+}
+
+#content #linkbutton a {
+  background: linear-gradient(to bottom, #959186, #626054);
+  color: #fff;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+  text-align:center;
+}
+
+.content_greywrap {
+  background-color: #f2f6f7;
+  /*border: 2px dotted gray;*/
+}
+
+.content_head h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+.content_body {
+  background-color: #fff;
+  border: 1px solid #d7dbda;
+}
+
+/* FORMS                                           */
+
+.formbox {
+  background-color: #f2f6f7;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+}
+
+.formbox h3 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+.btn-small {
+  background: linear-gradient(to bottom, #959387, #626054);
+  color: #fff;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* SONGS                                           */
+
+.content_body #songcount {
+  color: #4b8289;
+  font-size: 80%;
+  /*border: 2px dotted green;*/
+  text-align: left;
+}
+
+.nothing_found {
+  background: LightYellow;
+}
+
+.songcount {
+  color: #4b8289;
+}
+
+.tag_block {
+  background: #d7dbda;
+}
+
+.piece {
+  span {
+    color: gray;
+    font-size: 95%;
+  }
+}
+
+.meta {
+  color: gray;
+  font-size: 85%;
+}
+
+/* MISCELLANEOUS                                   */
+
+.gravatar {
+  border: 1px solid #d7dbda;
+}
+
+/* ERROR REPORTING                                 */
+#error_explanation {
+  color: #f00;
+}
+
+li.error input, li.error textarea, li.error select {
+  border: 2px solid #CC0000;
+}
+
+/* PAGINATION                                      */
+
+.pagination {
+  font-size: 10px;
+  /*text-align: center;*/
+}
+.pagination .disabled {
+  color: white;
+}
+.pagination .current {
+  background: 959186;
+  /*color: #959186;*/
+  font-style: normal;
+  font-weight: bold;
+}
+.pagination a {
+  border: 1px solid #dddddd;
+  color: #959186;
+  text-decoration: none;
+}
+.pagination a:hover, .pagination a:focus {
+  background: #5b2c10;
+  border-color: #003366;
+  color: white;
+}
+.pagination .page_info {
+  color: #aaaaaa;
+}
+

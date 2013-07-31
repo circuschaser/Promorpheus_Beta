@@ -1,13 +1,15 @@
 class SongsController < ApplicationController
 
   def index
-    @songs = Song.paginate( page: params[:page], per_page: 12)
+    # @songs = Song.paginate( page: params[:page], per_page: 12)
+    @songs = Song.search(params[:search]).paginate(per_page: 10, page: params[:page])
+  end
 
     # respond_to do |format|
     #   format.html
     #   format.xml { render :xml => @pieces}
     # end
-  end
+  # end
   
   # def new
   #   @piece = Piece.new
@@ -27,4 +29,7 @@ class SongsController < ApplicationController
   #   end
   # end
   
+  # def show
+  #   @songs = Song.all
+  # end
 end

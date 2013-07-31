@@ -7,4 +7,13 @@ class Song < ActiveRecord::Base
   has_and_belongs_to_many :tags, join_table: "songs_tags"
   has_and_belongs_to_many :setlists, join_table: "setlists_songs"
 
+  def self.search(search)
+  	if search
+  		where( "title LIKE ? OR composer_name LIKE ? OR album_name LIKE ? OR genre_name LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%" )
+  	else
+  		scoped
+  		# puts "Sorry. Nothing found."
+  	end
+  end
+
 end
