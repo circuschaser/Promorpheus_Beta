@@ -262,15 +262,16 @@ div.ui-dialog form label {
 
 .pagination {
   padding: 0.3em;
-  cursor: default; 
+  cursor: default;
 }
 
-.pagination a{
+.pagination a {
   padding: 0px 12px 0px 12px;
   margin: 0px 5px -10px 0px;
+  border-radius: 5px;
 }
 
-.pagination span{
+.pagination span {
   padding: 0px 0px 0px 0px;
   /*margin: 0px 0px 0px 0px;*/
   border: 0px;
@@ -279,12 +280,15 @@ div.ui-dialog form label {
 .pagination .page_info {
   padding-top: 0.8em;
 }
+
 .pagination .previous_page, .pagination .next_page {
   /*border-width: 2px; */
 }
+
 .pagination .previous_page {
-  margin-right: 1em; 
+  margin-right: 1em;
 }
+
 .pagination .next_page {
-  margin-left: 1em; 
+  margin-left: 1em;
 }

@@ -1,10 +1,44 @@
-/*$brown: #5b2c10;*/
+/* COLORS                                         */
+
+$white: #fff;
+
+/* main GRADIENT */
+$redBrown:      #421d02;
+$simpleBrown:   #5b2c10;
+$deepBrown:     #150d02;
+
+/* topbar gradient */
+$lgBrown:       #433832;
+$mgBrown:       #332822;
+$gBrown:        #2a1f19;
+
+
+$sidebar:       #1D1610;
+$liteBrown:     #B08D71;
+$cream:         #ffcda3;
+
+$linkGray:      #959186;
+$grayGreen:     #626054;
+$grayWrap:      #f2f6f7;
+$grayBorder:    #d7dbda;
+
+$tagBlue:       #4b8289;
+$tagKhaki:      #c9ba8f;
+$tagPine:       #dab171;
+$tagOrange:     #e18752;
+$tagDarkGreen:  #909962;
+$tagLiteGreen:  #cad998;
+
+$peachStar:     #e7b59a;
+
+$redBorder:     #CC0000;
+
 
 /* HTML MAIN                                       */
 
 html, body {
-  /*background-color: #5b2c10;*/
-  background: linear-gradient(to bottom, #421d02, #5b2c10 40%, #150d02);
+  /*background-color: $simpleBrown;*/
+  background: linear-gradient(to bottom, $redBrown, $simpleBrown 40%, $deepBrown);
   font-family: Lucida Grande, Lucida Sans Unicode, sans-serif;
   font-size: small;
 }
@@ -17,19 +51,19 @@ html, body {
 /* NAVIGATION MENU                                 */
 
 #navmenu span a, #navmenu span a:visited {
-  color: #B08D71;
+  color: $liteBrown;
   font-size: 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
 #navmenu span a:hover {
-  color: #ffcda3;
+  color: $cream;
   text-decoration: none;
 }
 
 #navmenu div.dropdown, #navmenu div.dropdown a {
-  color: #B08D71;
+  color: $liteBrown;
   font-size: 10px;
   text-decoration: none;
   font-weight: bold;
@@ -39,7 +73,7 @@ html, body {
 }
 
 #search_form span {
-  color: #FFFFFF;
+  color: $white;
   font-size: 10px;
   font-weight: bold;
   text-decoration: none;
@@ -48,23 +82,23 @@ html, body {
 /* TOP BAR                                         */
 
 #topbar {
-  background: linear-gradient(to bottom, #433832, #332822 30%, #2a1f19 55%, #332822);
+  background: linear-gradient(to bottom, $lgBrown, $mgBrown 30%, $gBrown 55%, $mgBrown);
 }
 
 #topbar_right {
-  color: #B08D71;
+  color: $liteBrown;
   font-size: 10px;
 }
 
 /* FOOTER                                          */
 
 #footer {
-  background: #1d1610;
-  border-top: 1px solid #B08D71;
+  background: $sidebar;
+  border-top: 1px solid $liteBrown;
 }
 
 #footer_links span {
-  color: #B08D71;
+  color: $liteBrown;
 }
 
 #footer_links span a:hover {
@@ -72,26 +106,26 @@ html, body {
 }
 
 #footer_links span a, #footer_links span a:visited {
-  color: #B08D71;
+  color: $liteBrown;
   text-decoration: none;
 }
 
 /* SIDEBAR                                         */
 
 #sidebar {
-  background-color: #1D1610;
+  background-color: $sidebar;
   font-size: 90%;
   /*border: 2px dotted green;*/
 }
 
 #sidebar h4 {
-  color: #B08D71;
+  color: $liteBrown;
   font-family: Arial;
   text-align: center;
 }
 
 #sidebar p {
-  color: #fff;
+  color: $white;
 }
 
 /* CONTENT                                         */
@@ -101,14 +135,14 @@ html, body {
 }
 
 #content #linkbutton a {
-  background: linear-gradient(to bottom, #959186, #626054);
-  color: #fff;
+  background: linear-gradient(to bottom, $linkGray, $grayGreen);
+  color: $white;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
   text-align:center;
 }
 
 .content_greywrap {
-  background-color: #f2f6f7;
+  background-color: $grayWrap;
   /*border: 2px dotted gray;*/
 }
 
@@ -118,18 +152,14 @@ html, body {
 }
 
 .content_body {
-  background-color: #fff;
-  border: 1px solid #d7dbda;
+  background-color: $white;
+  border: 1px solid $grayBorder;
 }
 
 /* FORMS                                           */
 
 .formbox {
-  background-color: #f2f6f7;
-}
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  background-color: $grayWrap;
 }
 
 .formbox h3 {
@@ -138,57 +168,45 @@ input, textarea, select, .uneditable-input {
 }
 
 .btn-small {
-  background: linear-gradient(to bottom, #959387, #626054);
-  color: #fff;
+  background: linear-gradient(to bottom, $linkGray, $grayGreen);
+  color: $white;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* SONGS                                           */
 
-.content_body #songcount {
-  color: #4b8289;
-  font-size: 80%;
-  /*border: 2px dotted green;*/
-  text-align: left;
-}
-
 .nothing_found {
   background: LightYellow;
 }
 
-.songcount {
-  color: #4b8289;
+.content_body #songcount {
+  color: $tagBlue;
+  font-size: 80%;
+  text-align: left;
 }
 
 .tag_block {
-  background: #d7dbda;
-}
-
-.piece {
-  span {
-    color: gray;
-    font-size: 95%;
-  }
+  background: $grayBorder;
 }
 
 .meta {
-  color: gray;
+  color: $simpleBrown;
   font-size: 85%;
 }
 
 /* MISCELLANEOUS                                   */
 
 .gravatar {
-  border: 1px solid #d7dbda;
+  border: 1px solid $grayBorder;
 }
 
 /* ERROR REPORTING                                 */
 #error_explanation {
-  color: #f00;
+  color: red;
 }
 
 li.error input, li.error textarea, li.error select {
-  border: 2px solid #CC0000;
+  border: 2px solid $redBorder;
 }
 
 /* PAGINATION                                      */
@@ -197,26 +215,26 @@ li.error input, li.error textarea, li.error select {
   font-size: 10px;
   /*text-align: center;*/
 }
+
 .pagination .disabled {
-  color: white;
+  color: $white;
 }
+
 .pagination .current {
-  background: 959186;
-  /*color: #959186;*/
   font-style: normal;
   font-weight: bold;
 }
+
 .pagination a {
-  border: 1px solid #dddddd;
-  color: #959186;
+  border: 1px solid $grayBorder;
+  background: $white;
+  color: $tagBlue;
   text-decoration: none;
 }
+
 .pagination a:hover, .pagination a:focus {
-  background: #5b2c10;
-  border-color: #003366;
-  color: white;
+  background: $tagBlue;
+  color:$white;
 }
-.pagination .page_info {
-  color: #aaaaaa;
-}
+
 
