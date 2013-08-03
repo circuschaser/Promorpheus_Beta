@@ -12,8 +12,6 @@ PromorpheusBeta::Application.routes.draw do
   resources :setlists
   resources :tags
 
-  get "users/new"
-
   root to: 'sessions#new'
 
   # match '/home', to: "pages#home"
@@ -26,6 +24,7 @@ PromorpheusBeta::Application.routes.draw do
 
   # match '/dashboard', to: "users#show"
   match '/music', to: "songs#index"
+  # match '/setlists', to: "setlists#new"
 
 end
 

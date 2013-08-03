@@ -27,7 +27,7 @@
       <% else %>
 
       <div id="songcount">
-        Showing <%= @songs.all.count %> matches
+        Showing <%= pluralize(@songs.all.count, "match") %>
       </div>
 
       <table class="piece">

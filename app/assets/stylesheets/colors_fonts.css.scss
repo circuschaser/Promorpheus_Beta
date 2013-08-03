@@ -23,11 +23,11 @@ $grayWrap:      #f2f6f7;
 $grayBorder:    #d7dbda;
 
 $tagBlue:       #4b8289;
-$tagKhaki:      #c9ba8f;
+$tagTan:        #c9ba8f;
 $tagPine:       #dab171;
 $tagOrange:     #e18752;
-$tagDarkGreen:  #909962;
-$tagLiteGreen:  #cad998;
+$tagForest:     #909962;
+$tagLime:       #cad998;
 
 $peachStar:     #e7b59a;
 
@@ -62,14 +62,35 @@ html, body {
   text-decoration: none;
 }
 
-#navmenu div.dropdown, #navmenu div.dropdown a {
+#navmenu .dropdown, #navmenu .dropdown a {
   color: $liteBrown;
   font-size: 10px;
   text-decoration: none;
   font-weight: bold;
   &:hover {
-      text-decoration: none;
-    }
+    color: $cream;
+    text-decoration: none;
+    background: none;
+
+  }
+}
+
+#navmenu .dropdown .caret {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    vertical-align: top;
+    border-top: 4px solid $liteBrown;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: "";
+}
+
+
+#navemenu div.dropdown-menu a, li {
+  &:hover {
+    background: $mgBrown;
+  }
 }
 
 #search_form span {
@@ -134,7 +155,7 @@ html, body {
   /*border: 2px dotted yellow;*/
 }
 
-#content #linkbutton a {
+#linkbutton a {
   background: linear-gradient(to bottom, $linkGray, $grayGreen);
   color: $white;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);

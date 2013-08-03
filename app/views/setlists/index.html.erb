@@ -1,0 +1,53 @@
+<% provide(:title, "My Setlists") %>
+
+<div id="sidebar">
+  <h4>The Sidebar Headline</h4>
+</div>
+
+<div id="content_main">
+  <div class="content_greywrap">
+    <div class="content_head">
+      <h2>My Setlists</h2>
+    </div>
+    
+    <div class="content_body">
+      <% if @setlists.size == 0 %>
+        <div class="nothing_found">
+          Sorry. Nothing found.
+        </div>
+      <% else %>
+
+      <div id="songcount">
+        Showing <%= pluralize(@setlists.all.count, "match") %>
+      </div>
+
+      <table class="piece">
+
+        <% @setlists.each do |set| %>
+        <tr>
+          <td class="content_left">
+            <%= set[:title] %>
+            <p class="meta"><%= set[:performance_date] %></p>
+          </td>
+          <td class="content_right">
+            <%= set[:description] %>
+            <p class="meta">Contains <%= pluralize(set.songs.count, "song") %></p>
+          </td>
+          <td class="tag_block">
+            <div id="linkbutton">
+              <%= link_to "DELETE", set, method: :delete,
+                    data: { confirm: "Do you really want to delete: #{set.title.upcase}?" } %>
+            </div>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+
+    <% end %>
+
+  </div>
+</div>
+
+
+

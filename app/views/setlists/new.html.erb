@@ -1,0 +1,30 @@
+<% provide(:title, "New Setlist") %>
+
+<div id="sidebar">
+  <h4>The Sidebar Headline</h4>
+</div>
+
+<div id="content_main">
+  <div class="content_greywrap">
+    <div class="content_head">
+    	<h2>New Setlist</h2>
+    </div>
+    <div class="content_body">
+    	<%= form_for(@setlist) do |f| %>
+    	<%= render 'shared/error_messages', object: f.object %>
+
+    	<%= f.label :title %>
+    	<%= f.text_field :title %>
+
+    	<%= f.label :description %>
+    	<%= f.text_field :description %>
+
+    	<%= f.label :performance_date %>
+    	<%= f.text_field :performance_date %>
+
+    	<%= f.submit "Create My Setlist", class: "btn btn-small" %>
+    	<% end %>
+
+    </div>
+  </div>
+</div>
